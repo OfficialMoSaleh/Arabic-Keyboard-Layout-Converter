@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خطة وتصميم فيديو تيك توك | حملة تحويل الكتابة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #0f172a;
+      --accent: #38bdf8;
+      --accent-purple: #a855f7;
+      --green: #22c55e;
+      --red: #ef4444;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Cairo', system-ui, sans-serif;
+      padding: 30px 20px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #38bdf8, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 16px;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .timeline-item {
+      position: relative;
+      padding-right: 24px;
+      padding-bottom: 24px;
+      border-right: 2px solid #334155;
+    }
+    .timeline-item:last-child {
+      border-right: 2px solid transparent;
+      padding-bottom: 0;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      right: -7px;
+      top: 4px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 10px var(--accent);
+    }
+    .time-tag {
+      font-weight: 800;
+      color: var(--accent);
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+    .timeline-title {
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+    .speech {
+      background: #1e293b;
+      border-right: 3px solid #38bdf8;
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin: 8px 0;
+      font-style: italic;
+      color: #e2e8f0;
+    }
+    .preview-box {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .preview-box img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 2px solid #334155;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    }
+    .copy-box {
+      background: #020617;
+      border: 1px dashed #334155;
+      padding: 14px;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-size: 14px;
+      user-select: all;
+    }
+    .highlight-red { color: #f87171; font-weight: bold; }
+    .highlight-green { color: #4ade80; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="badge">🔥 خطة إطلاق حملة التيك توك في الويك إند</div>
+      <h1>حملة: "مين بيحصله الموقف المستفز ده؟"</h1>
+      <p style="color: var(--text-muted);">دليل تصوير ونشر احترافي بالثواني، مع التصاميم الجاهزة والكلمات التفاعلية</p>
+    </header>
+
+    <div class="grid">
+      <!-- Storyboard Timeline -->
+      <div class="card">
+        <h2>🎬 سيناريو تصوير الفيديو (25 ثانية فقط)</h2>
+        
+        <div class="timeline-item">
+          <div class="time-tag">الثانية 00:00 - 00:03 (الخطاف السريع - Hook)</div>
+          <div class="timeline-title">الكتابة بحماس وسرعة دون النظر للشاشة</div>
+          <p>الكاميرا موجهة عليك، تبتسم وتكتب بسرعة جنونية على الكيبورد كأنك بتكتب رسالة مهمة.</p>
+          <div class="speech">كتابة سريعة وصوت تكتكة كيبورد عالية ⌨️</div>
+          <p style="font-size: 13px; color: var(--accent);">النص على الشاشة: <b>"لما تكتب رسالة دقيقة ونص من غير ما تبص للشاشة..."</b></p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="time-tag">الثانية 00:03 - 00:07 (الصدمة - The Shock)</div>
+          <div class="timeline-title">رفع العين للشاشة والتجمد</div>
+          <p>ترفع عينك، وشك يتحول لصدمة كوميدية. الكاميرا تتحول فوراً لشاشة الكمبيوتر:</p>
+          <div class="speech highlight-red" style="font-family: 'JetBrains Mono', monospace; direction: ltr; text-align: left;">
+            hgsbl ugd;l dhughl ,vplm hggi
+          </div>
+          <div class="speech">"أكتر موقف بيجلط حرفياً في التاريخ! 🤦‍♂️"</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="time-tag">الثانية 00:07 - 00:18 (السحر - The Magic)</div>
+          <div class="timeline-title">التحويل الفوري بضغطة زر (بدون تظليل)</div>
+          <p>الكاميرا على إيدك والشاشة في نفس الوقت. بدون ما تظلل النص، تضغط فقط الاختصار:</p>
+          <div class="speech highlight-green">
+            بضغطة واحدة على [ Ctrl + Shift + Z ] ➔ يتحول فوراً لـ "السلام عليكم ياعالم ورحمة الله" ✨
+          </div>
+          <div class="speech">"بدل ما تمسح وتعيد.. عملت لكم أداة بتحوله في ثانية واحدة في الويندوز وكروم!"</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="time-tag">الثانية 00:18 - 00:25 (إشعال التعليقات - CTA)</div>
+          <div class="timeline-title">الدعوة للتفاعل وتحميل الأداة</div>
+          <div class="speech">
+            "مين بيحصله الموقف ده؟ اعترفوا في الكومنتات! والرابط سايبهولكم في البايو مجاناً ومفتوح المصدر."
+          </div>
+        </div>
+      </div>
+
+      <!-- Assets & Copywriting -->
+      <div class="card">
+        <h2>🖼️ التصاميم وأوقات النشر الذهبية</h2>
+        
+        <h3 style="font-size: 16px; color: #fff; margin-bottom: 8px;">⏰ أفضل مواعيد النشر في الويك إند (اليوم الجمعة والسبت):</h3>
+        <ul style="padding-right: 20px; font-size: 14px; margin-bottom: 20px; color: var(--text-muted);">
+          <li><b style="color: #4ade80;">اليوم (الجمعة):</b> من <b>02:30 ظهراً إلى 04:30 عصراً</b> (ذروة بعد الصلاة) أو من <b>08:00 مساءً إلى 11:30 مساءً</b> (الذروة الأقوى في الأسبوع).</li>
+          <li><b style="color: #38bdf8;">السبت:</b> من <b>01:00 ظهراً إلى 03:30 عصراً</b> أو من <b>07:30 مساءً إلى 11:00 مساءً</b>.</li>
+        </ul>
+
+        <h3 style="font-size: 16px; color: #fff; margin-bottom: 6px;">✍️ النص المكتوب مع الفيديو (Caption):</h3>
+        <div class="copy-box">
+أكتر موقف بيجلط حرفياً في التاريخ 🤦‍♂️ مين بيحصله كده كتير؟ 😂<br><br>
+لو دايماً بتنسى تحول الكيبورد لعربي وتلاقي نفسك كاتب طلاسم، عملت أداة بتحول الكلام في مكانه بضغطة زرار واحدة من غير ما تمسح ولا حرف! ⌨️✨<br><br>
+الرابط في البايو مجاناً ومفتوح المصدر بالكامل 🔗<br><br>
+#مبرمجين #برمجة #تكنولوجيا #تقنية #نصائح_كمبيوتر #ويندوز #shortcuts #tech #arabic
+        </div>
+
+        <h3 style="font-size: 16px; color: #fff; margin-top: 15px; margin-bottom: 6px;">📌 التعليق المثبت (Pinned Comment):</h3>
+        <div class="copy-box" style="border-color: #38bdf8;">
+اكتبوا في الكومنتات جملة كتبتوها بالإنجليزي بالغلط ونشوف مين هيعرف يقراها الأول! 😂👇
+        </div>
+      </div>
+    </div>
+
+    <!-- Previews Gallery -->
+    <div class="card" style="text-align: center;">
+      <h2>🎨 التصاميم الجاهزة داخل مجلد assets/tiktok</h2>
+      <p style="color: var(--text-muted); margin-bottom: 20px;">تم إنشاء التصاميم بصيغة 9:16 العمودية المخصصة لتيك توك بجودة فائقة:</p>
+      
+      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 280px; max-width: 360px;">
+          <h4 style="margin-bottom: 10px; color: var(--accent);">1. الغلاف الإنفوجرافيك (1080x1920)</h4>
+          <img src="tiktok_cover.png" alt="TikTok Cover" style="width: 100%; border-radius: 12px; border: 2px solid #3b82f6;">
+        </div>
+        <div style="flex: 1; min-width: 280px; max-width: 360px;">
+          <h4 style="margin-bottom: 10px; color: var(--accent-purple);">2. الغلاف الثري دي الكرتوني (3D Render)</h4>
+          <img src="tiktok_3d_cover.jpg" alt="TikTok 3D Cover" style="width: 100%; border-radius: 12px; border: 2px solid #a855f7;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
