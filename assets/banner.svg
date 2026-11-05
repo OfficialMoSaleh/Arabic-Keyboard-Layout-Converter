@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="35" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600;800;900&amp;family=JetBrains+Mono:wght@500;700&amp;family=Inter:wght@400;600;800&amp;display=swap');
+    .title { font-family: 'Inter', system-ui, sans-serif; font-weight: 900; font-size: 46px; fill: #ffffff; }
+    .title-ar { font-family: 'Cairo', system-ui, sans-serif; font-weight: 800; font-size: 34px; fill: url(#accentGrad); }
+    .subtitle { font-family: 'Inter', system-ui, sans-serif; font-weight: 400; font-size: 18px; fill: #94a3b8; }
+    .code-font { font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 600; }
+    .badge-text { font-family: 'Inter', system-ui, sans-serif; font-size: 13px; font-weight: 600; fill: #e0f2fe; }
+    .tag { font-family: 'Cairo', system-ui, sans-serif; font-size: 14px; font-weight: 700; fill: #38bdf8; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="480" rx="20" fill="url(#bgGrad)" />
+
+  <!-- Ambient Glow Orbs -->
+  <circle cx="150" cy="100" r="160" fill="#2563eb" opacity="0.25" filter="url(#glow)" />
+  <circle cx="1050" cy="380" r="180" fill="#a855f7" opacity="0.2" filter="url(#glow)" />
+  <circle cx="600" cy="240" r="140" fill="#0284c7" opacity="0.15" filter="url(#glow)" />
+
+  <!-- Header Section -->
+  <g transform="translate(60, 65)">
+    <!-- Top Pill -->
+    <rect width="280" height="32" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <circle cx="16" cy="16" r="5" fill="#22c55e" />
+    <text x="32" y="21" class="badge-text">v1.2.0 • Open Source • Win32 &amp; Web</text>
+
+    <!-- Main Title -->
+    <text x="0" y="85" class="title">Arabic Keyboard Layout Converter</text>
+    <text x="0" y="130" class="title-ar">مُحوّل لغة الكتابة الذكي (عربي ⇋ En)</text>
+    <text x="0" y="165" class="subtitle">Instant, zero-click bidirectional typing fixer for Windows (Word, Telegram, WhatsApp) &amp; Chrome/Edge.</text>
+  </g>
+
+  <!-- Interactive Demo Box / Visual Representation -->
+  <g transform="translate(60, 260)" filter="url(#cardShadow)">
+    <!-- Card Frame -->
+    <rect width="1080" height="160" rx="16" fill="url(#cardGrad)" stroke="#3b82f6" stroke-width="1.5" stroke-opacity="0.4" />
+
+    <!-- Left Box: Wrong Input (Typo in English layout) -->
+    <g transform="translate(30, 25)">
+      <rect width="400" height="110" rx="12" fill="#090d16" stroke="#ef4444" stroke-width="1" stroke-opacity="0.4" />
+      <text x="20" y="32" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#f87171" letter-spacing="1">WRONG INPUT (EN KEYBOARD)</text>
+      <text x="20" y="75" class="code-font" fill="#fca5a5">hgsbl ugd;l ,vplm hggi</text>
+      <rect x="20" y="88" width="130" height="20" rx="4" fill="#3b0764" />
+      <text x="26" y="102" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#d8b4fe">Caps Lock auto-fixed</text>
+    </g>
+
+    <!-- Center Arrow & Badge -->
+    <g transform="translate(470, 48)">
+      <circle cx="70" cy="32" r="30" fill="url(#badgeGrad)" filter="url(#cardShadow)" />
+      <path d="M 60 32 L 80 32 M 73 25 L 80 32 L 73 39" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <text x="70" y="78" text-anchor="middle" font-family="'Cairo', sans-serif" font-size="12" font-weight="700" fill="#38bdf8">تحويل فوري</text>
+    </g>
+
+    <!-- Right Box: Result (Clean Arabic) -->
+    <g transform="translate(650, 25)">
+      <rect width="400" height="110" rx="12" fill="#090d16" stroke="#22c55e" stroke-width="1.2" stroke-opacity="0.5" />
+      <text x="380" y="32" text-anchor="end" font-family="'Cairo', sans-serif" font-size="13" font-weight="800" fill="#4ade80">النتيجة الفورية (عربي 101)</text>
+      <text x="380" y="75" text-anchor="end" font-family="'Cairo', sans-serif" font-size="22" font-weight="700" fill="#86efac">السلام عليكم ورحمة الله</text>
+      <rect x="250" y="88" width="130" height="20" rx="4" fill="#064e3b" />
+      <text x="315" y="102" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#6ee7b7">Zero-Click Magic ✨</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>مُحوّل لوحة المفاتيح</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="brand">
+        <div class="brand-icon-wrapper">
+          <span class="brand-icon">⌨️</span>
+        </div>
+        <div class="brand-info">
+          <h1 class="brand-title">مُحوّل الكتابة</h1>
+          <span class="brand-badge">عربي ⇋ English</span>
+        </div>
+      </div>
+      <div class="mode-tabs">
+        <button id="btn-auto" class="mode-tab active" title="كشف تلقائي">تلقائي</button>
+        <button id="btn-to-ar" class="mode-tab" title="تحويل للعربية">عربي</button>
+        <button id="btn-to-en" class="mode-tab" title="تحويل للإنجليزية">En</button>
+      </div>
+    </header>
+
+    <!-- Source Input Card -->
+    <div class="input-card">
+      <div class="card-header">
+        <span class="card-label">النص الأصلي:</span>
+        <div class="card-meta">
+          <span id="charCount" class="char-count">0 حرف</span>
+          <button id="btnClear" class="icon-text-btn" title="مسح النص">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18m-2 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+            مسح
+          </button>
+        </div>
+      </div>
+      <div class="textarea-wrapper">
+        <textarea id="inputText" rows="3" placeholder="اكتب أو الصق هنا (مثال: hgsbl ugd;l)..." autofocus></textarea>
+      </div>
+    </div>
+
+    <!-- Quick Conversion Direction Indicator -->
+    <div class="direction-indicator">
+      <span class="pulse-dot"></span>
+      <span id="directionText" class="direction-text">كشف تلقائي جاهز</span>
+      <button id="btnSwap" class="btn-swap-small" title="تبديل النصوص">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16V4m0 0L3 8m4-4l4 4m6 4v12m0 0l4-4m-4 4l-4-4"/></svg>
+        تبديل
+      </button>
+    </div>
+
+    <!-- Result Output Card -->
+    <div class="input-card result-card">
+      <div class="card-header">
+        <span class="card-label">النتيجة المحولة:</span>
+        <button id="btnCopy" class="btn-copy-main" title="نسخ النتيجة">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span id="copyBtnText">نسخ النتيجة</span>
+        </button>
+      </div>
+      <div class="textarea-wrapper">
+        <textarea id="outputText" rows="3" readonly placeholder="ستظهر النتيجة فوراً..."></textarea>
+      </div>
+    </div>
+
+    <!-- Settings Toggle -->
+    <div class="settings-group">
+      <div class="widget-toggle-row">
+        <div class="toggle-info">
+          <span class="toggle-icon">✨</span>
+          <div>
+            <div class="toggle-title">زر التحويل عند الكتابة</div>
+            <div class="toggle-desc">زر عائم قابل للسحب يظهر بجانب أي مربع نص</div>
+          </div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggleFieldBadge" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Footer Shortcuts -->
+    <footer class="app-footer">
+      <div class="shortcut-tip">
+        <span>⚡ اختصار سريع في أي موقع:</span>
+        <div class="keys-group" dir="ltr">
+          <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd>
+          <span class="keys-sep">/</span>
+          <kbd>Alt</kbd> + <kbd>X</kbd>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="converter.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
