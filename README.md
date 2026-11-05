@@ -17,10 +17,10 @@
   Instant, zero-click bidirectional typing fixer for <b>all Windows applications</b> (Word, Telegram, WhatsApp, Notepad, Excel) and <b>Chromium Browsers</b> (Chrome, Edge, Brave, Opera).
 </p>
 
-[**🚀 Quick Start**](#-quick-start) •
+[**🚀 Setup & Usage Guide**](#-setup--usage-guide-طريقة-التثبيت-والتشغيل) •
 [**✨ Features**](#-key-features) •
-[**🖥️ Windows App**](#️-windows-desktop-app) •
-[**🧩 Chrome Extension**](#-chrome--edge-extension) •
+[**🧩 Chrome Extension**](#-1-chrome--edge-extension-إضافة-المتصفح) •
+[**🖥️ Windows App**](#️-2-windows-desktop-app-برنامج-الويندوز-للكمبيوتر) •
 [**🏗️ Architecture**](#️-architecture) •
 [**عربي (دليل الاستخدام)**](#-دليل-الاستخدام-باللغة-العربية)
 
@@ -66,62 +66,60 @@ Instead of:
 
 ---
 
-## 📸 Screenshots & Previews
+## 🚀 Setup & Usage Guide (طريقة التثبيت والتشغيل)
 
-<div align="center">
+### 🧩 1. Chrome & Edge Extension (إضافة المتصفح)
 
-### Floating Smart Widget (Desktop & Web)
-![Floating Widget Preview](assets/floating-badge-preview.png)
-*Draggable, unobtrusive widget floating over active apps like WhatsApp, Telegram, or any text editor.*
+#### 📥 Installation Steps (خطوات التثبيت):
+1. **Open Extensions Page:**
+   - In **Google Chrome**: type `chrome://extensions/` in the URL bar.
+   - In **Microsoft Edge**: type `edge://extensions/` in the URL bar.
+2. **Enable Developer Mode:** Turn on the **Developer mode** (وضع المطور) toggle in the top-right corner.
+3. **Load the Extension:** Click the **Load unpacked** (تحميل حزمة غير مضغوطة) button in the top-left.
+4. **Select Directory:** Browse to and select the `chrome-extension` folder inside this repository.
+5. **Ready!** The extension will be installed immediately and works across all websites.
 
-<br>
-
-### Browser Extension Popup & Controls
-![Extension Popup](assets/extension-preview.png)
-*Modern dark-mode popup with layout toggle, live testing field, and settings.*
-
-</div>
+#### 💡 How to Use (طريقة الاستخدام):
+- Click inside any text box, comment section, or search bar (WhatsApp Web, Facebook, Google, YouTube, etc.).
+- A movable smart badge appears next to the active field:
+  ```text
+  [ ✕ | عربي ⇋ En | تحويل | 🔄 | ⋮⋮ ]
+  ```
+- Type normally. If you mistyped in the wrong layout (e.g., `hgsbl ugd;l`), just:
+  - Click the **`[ تحويل ]`** button directly.
+  - Or press **`Ctrl + Shift + X`** / **`Alt + X`**.
+- The text is instantly converted to Arabic `السلام عليكم` in-place!
 
 ---
 
-## 🚀 Quick Start
+### 🖥️ 2. Windows Desktop App (برنامج الويندوز للكمبيوتر)
 
-### 1️⃣ Windows Desktop App
+> **Zero Dependencies:** Pure standard library with no external Python packages needed!
 
-> **Requirement:** Windows 10/11 with Python 3.8+ (Pure standard library — zero `pip install` required!).
+#### 🚀 How to Launch (طرق التشغيل):
+| Launcher File | Description |
+| :--- | :--- |
+| ⚡ **[`تشغيل_صامت.vbs`](تشغيل_صامت.vbs)** | **(Recommended / الأفضل والأسرع)** Runs completely silently in the background with **0% console window flash** and zero taskbar clutter. |
+| 🪟 **[`تشغيل_تطبيق_الويندوز.bat`](تشغيل_تطبيق_الويندوز.bat)** | Standard one-click Windows launcher (ملف التشغيل المباشر بالعربية). |
+| 💻 **[`Run_App.bat`](Run_App.bat)** | Alternative English launcher file. |
 
-1. Clone or download this repository:
-   ```bash
-   git clone https://github.com/OfficialMoSaleh/Arabic-Keyboard-Layout-Converter.git
-   cd Arabic-Keyboard-Layout-Converter
+#### 💡 How to Use in Any Windows App (طريقة الاستخدام):
+1. Launch the app using one of the files above. A compact floating widget will appear on your screen:
+   ```text
+   [ ✕ | 🔄 تحويل الكتابة | ⋮⋮ ]
    ```
-2. Launch with a single click:
-   - **Normal Launch:** Double-click [`تشغيل_تطبيق_الويندوز.bat`](Run_App.bat) or [`Run_App.bat`](Run_App.bat).
-   - **Silent Launch (No CMD window):** Double-click [`تشغيل_صامت.vbs`](تشغيل_صامت.vbs).
-3. **Usage:**
-   - Type anywhere in Windows.
-   - Press **`Ctrl + Shift + Z`** or **`Ctrl + Alt + Z`** (or click the floating widget).
-   - Your mistyped text converts instantly!
+2. Type in **any application**: **Microsoft Word**, **Telegram**, **WhatsApp Desktop**, **Notepad**, **Excel**, **Slack**, **Discord**, etc.
+3. If you typed with the wrong layout:
+   - Press the global hotkey: **`Ctrl + Shift + Z`** or **`Ctrl + Alt + Z`** or **`Ctrl + Shift + X`**.
+   - *OR* click the floating pill **`[ 🔄 تحويل الكتابة ]`**.
+4. The mistyped text converts instantly without needing to manually highlight it!
+5. **Hide Floating Widget:** Click `✕` on the widget to hide it. Global hotkeys will continue working smoothly in the background.
 
 ---
 
-### 2️⃣ Chrome / Edge Browser Extension
+### 🌐 3. Standalone Offline Web Tool (أداة الويب أوفلاين)
 
-1. Open your Chromium browser and navigate to:
-   - Chrome: `chrome://extensions/`
-   - Edge: `edge://extensions/`
-2. Enable **Developer mode** (top right switch).
-3. Click **Load unpacked** (تحميل حزمة غير مضغوطة).
-4. Select the `chrome-extension` folder inside this repository.
-5. **Usage:**
-   - In any input box or textarea on any webpage, the smart badge `[ 🔄 تحويل ]` appears.
-   - Or press **`Ctrl + Shift + X`** / **`Alt + X`** / Right-click ➔ **تحويل النص (عربي ⇋ En)**.
-
----
-
-### 3️⃣ Standalone Web Tool (Offline Playground)
-
-Double-click [`web-tool/index.html`](web-tool/index.html) to open a standalone, zero-dependency offline web tool in any modern browser.
+Simply double-click [`web-tool/index.html`](web-tool/index.html) to open the offline converter directly in any browser without running any servers or scripts.
 
 ---
 
@@ -157,10 +155,8 @@ flowchart TD
 ## 📁 Repository Structure
 
 ```text
-├── assets/                          # Badges, SVG banner, and screenshots
-│   ├── banner.svg                   # High-res vector header banner
-│   ├── floating-badge-preview.png   # Floating widget screenshot
-│   └── extension-preview.png        # Extension popup screenshot
+├── assets/                          # Badges and vector banners
+│   └── banner.svg                   # High-res vector header banner
 │
 ├── chrome-extension/                # Manifest V3 Chrome/Edge Extension
 │   ├── manifest.json                # V3 manifest configuration
