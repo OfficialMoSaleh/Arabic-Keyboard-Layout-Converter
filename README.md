@@ -225,5 +225,5 @@ Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more details
 ---
 
 <div align="center">
-  <sub>Built with ❤️ for the Arabic &amp; International Open-Source Community by <b>Mohamed Saleh</b></sub>
+  <sub>Built with ❤️ for the Arabic &amp; International Open-Source Community by <b>Muhammad Saleh</b></sub>
 </div>
